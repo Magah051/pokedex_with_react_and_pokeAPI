@@ -7,16 +7,25 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { ClassNames } from '@emotion/react';
 
-export default function PokemonCard({name}) {
+export default function PokemonCard({name, image}) {
   return (
     <Card sx={{ maxWidth: 345, marginRight:"1em", marginBottom:"1em" }}>
       <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
+        sx={{ height: "auto", paddingTop: "100%" }}
+        image={image}
+        title={name}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+      <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          sx={{
+            fontSize: "clamp(0.5rem, 2vw, 1rem)",
+            lineHeight: "1.2",
+            overflow: "hidden",
+          }}
+        >
           {name}
         </Typography>
         
