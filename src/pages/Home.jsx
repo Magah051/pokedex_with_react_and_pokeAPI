@@ -20,9 +20,22 @@ export const Home = () => {
     var response = axios.all(endpoints.map((endpoint)=>axios.get(endpoint))).then((res) => setPokemons(res));
     };
 
+    const pokemonFilter = (name) =>{
+        var filteredPokemons = [];
+        if (name===""){
+            getPokemons();
+        }
+        for (var i in pokemons) {
+            if (pokemons[i].data.name.includes(name)){
+                filteredPokemons.push(pokemons[i]);
+            }
+        }
+        setPokemons(filteredPokemons);
+    };
+
     return(
         <div>
-            <Navbar/>
+            <Navbar pokemonFilter={pokemonFilter}/>
             <Container maxWidth="false">
                 <Grid container>
                     {pokemons.map((pokemon, key)=> (
