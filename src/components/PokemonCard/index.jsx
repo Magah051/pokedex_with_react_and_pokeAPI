@@ -5,10 +5,11 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { ClassNames } from '@emotion/react';
 
-export default function PokemonCard() {
+export default function PokemonCard({name}) {
   return (
-    <Card sx={{ maxWidth: 345, marginRight:"1em" }}>
+    <Card sx={{ maxWidth: 345, marginRight:"1em", marginBottom:"1em" }}>
       <CardMedia
         sx={{ height: 140 }}
         image="/static/images/cards/contemplative-reptile.jpg"
@@ -16,7 +17,7 @@ export default function PokemonCard() {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {name}
         </Typography>
         
         {/*<Typography variant="body2" color="text.secondary">
