@@ -7,14 +7,9 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { ClassNames } from '@emotion/react';
 import { CardActionArea } from '@mui/material';
+import { typeHandle } from '../../utils';
 
 export default function PokemonCard({name, image, types}) {
-  const typeHandle = () => {
-    if (types[1]){
-      return "Type: " + types[0].type.name + " and " + types[1].type.name;
-    }
-    return "Type: " + types[0].type.name;
-  };
 
   return (
     <Card sx={{ maxWidth: 345, marginRight:"1em", marginBottom:"1em" }}>
@@ -39,7 +34,7 @@ export default function PokemonCard({name, image, types}) {
           </Typography>
 
           <Typography gutterBottom variant="caption" component="div">
-            {typeHandle()}
+            {typeHandle(types)}
           </Typography>
 
           {/*<Typography variant="body2" color="text.secondary">
