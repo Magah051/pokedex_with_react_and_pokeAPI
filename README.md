@@ -35,8 +35,7 @@ O aplicativo estará disponível em http://localhost:3000.
 - PokeAPI
 
 ### Interface da Aplicação
-
-![ezgif-2-5f59216771](https://github.com/Magah051/pokedex_with_react_and_vite/assets/31749933/c030d729-d0af-43e4-b4d9-95127b722a2c)
+![ezgif-3-65811ea5a6](https://github.com/Magah051/pokedex_with_react_and_pokeAPI/assets/31749933/daec7f02-401d-437c-8d1d-3615fd0f3e44)
 
 ## Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issues) ou enviar pull requests para melhorar este projeto.
